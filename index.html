@@ -1,14 +1,1052 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Ulises Vera</title>
     <link href="/css/output.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
+
 </head>
-<body>
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
+
+
+<body id="sobremi"
+    class="min-h-screen bg-fixed bg-[url('https://www.transparenttextures.com/patterns/skulls.png'),linear-gradient(to_right,var(--color-background),var(--color-backgroundSecondary),var(--color-backgroundLastly))]">
+    <header class="sticky top-0 z-50">
+        <nav class="mx-auto max-w-7xl">
+            <div class="relative flex h-20 items-center justify-between mx-1.5">
+                <!-- Nombre al inicio -->
+                <div class="flex items-center">
+                    <span class="text-2xl font-mono text-white">Ulises Vera Cuevas</span>
+                </div>
+                <!-- Enlaces (ocultos en mobile) -->
+                <div class="hidden sm:block">
+                    <div class="flex space-x-4">
+                        <a href="#sobremi"
+                            class="rounded-md px-3 py-2 text-sm font-mono text-white hover:bg-white/5 hover:text-white">Sobre
+                            mi</a>
+                        <a href="#stack"
+                            class="rounded-md px-3 py-2 text-sm font-mono text-white hover:bg-white/5 hover:text-white">Stack</a>
+                        <a href="#exp"
+                            class="rounded-md px-3 py-2 text-sm font-mono text-white hover:bg-white/5 hover:text-white">Experiencias
+                            y Proyectos</a>
+                        <a href="#cursos"
+                            class="rounded-md px-3 py-2 text-sm font-mono text-white hover:bg-white/5 hover:text-white">Cursos
+                            y Certificaciones</a>
+                        <a href="#contactame"
+                            class="rounded-md px-3 py-2 text-sm font-mono text-white hover:bg-white/5 hover:text-white">Contactame</a>
+                    </div>
+                </div>
+                <div class="flex lg:hidden">
+                    <button type="button" id="menu-toggle"
+                        class="-m-2.5 inline-flex items-center justify-center rounded-md p-2.5 text-white focus:outline-none">
+                        <svg class="size-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </nav>
+        <div id="mobile-menu"
+            class="absolute left-0 right-0 top-full bg-[var(--color-background)] px-4 py-4 space-y-3 text-white text-center font-semibold transition-all duration-300 transform scale-y-0 origin-top lg:hidden">
+            <a href="#sobremi" class="mobile-link block py-1 hover:text-black">Sobre
+                mi</a>
+            <a href="#stack" class="mobile-link block py-1 hover:text-black">Stack</a>
+            <a href="#exp" class="mobile-link block py-1 hover:text-black">Experiencias y Proyectos</a>
+            <a href="#cursos" class="mobile-link block py-1 hover:text-black">Cursos
+                y Certificaciones</a>
+            <a href="#contactame" class="mobile-link block py-1 hover:text-black">Contactame</a>
+        </div>
+    </header>
+    <section class="w-full my-20 sm:my-32 px-4">
+        <div class="max-w-6xl mx-auto flex flex-col-reverse md:flex-row items-center justify-items-end-safe gap-6">
+            <div class="text-center md:text-left md:max-w-lg">
+                <h1 class="text-5xl sm:text-6xl md:text-6xl font-mono text-white mt-28">
+                    Ingeniero de Software<span class="text-[var(--color-orangeStrong)]">.</span>
+                </h1>
+                <h2 class="text-2xl sm:text-3xl md:text-xl font-mono text-white">
+                    Desarrollador de Software<span class="text-[var(--color-orangeStrong)]">.</span>
+                </h2>
+                <p class="font-mono text-white mt-10 text-justify">
+                    Que tal colega, soy Ulises Vera Cuevas, un apasionado
+                    desarrollador Full Stack, fanático de la tecnología y
+                    comprometido con mi trabajo<span class="text-[var(--color-orangeStrong)]">.</span>
+                </p>
+                <el-dropdown class="inline-block">
+                    <button
+                        class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-[var(--color-background)] px-3 py-2 text-sm font-semibold text-white inset-ring-1 inset-ring-white/5 hover:bg-[var(--color-backgroundSecondary)] font-mono mt-4">
+                        Echale un ojo a mi CV.
+                        <svg viewBox="0 0 20 20" fill="currentColor" data-slot="icon" aria-hidden="true"
+                            class="-mr-1 size-5 text-gray-400">
+                            <path
+                                d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z"
+                                clip-rule="evenodd" fill-rule="evenodd" />
+                        </svg>
+                    </button>
+                    <el-menu anchor="bottom end" class="w-56 bg-gray-800" class="w-56 bg-gray-800">
+                        <div class="py-1">
+                            <button onclick="downloadFile('CV-Español-UlisesVC.pdf')"
+                                class="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white focus:bg-white/5 focus:text-white focus:outline-hidden">
+                                <img src="/img/mexico.png" alt="Español" class="inline w-4 h-4 mr-2">
+                                CV en Español
+                            </button>
+                            <button onclick="downloadFile('CV-English-UlisesVC.pdf')"
+                                class="w-full text-left px-4 py-2 text-sm text-gray-300 hover:bg-white/5 hover:text-white focus:bg-white/5 focus:text-white focus:outline-hidden">
+                                <img src="/img/eua.png" alt="Español" class="inline w-4 h-4 mr-2">
+                                CV in English
+                            </button>
+                        </div>
+                    </el-menu>
+                </el-dropdown>
+            </div>
+
+            <!-- Imagen/forma -->
+            <div class="relative w-64 h-64 flex-shrink-0 mx-auto">
+                <div
+                    class="mancha-traslucida bg-[var(--color-orangeStrong)] absolute top-0 left-0 opacity-60 rounded-full w-80 h-80">
+                </div>
+                <div class="c-shape bg-[var(--color-yellowbBase)] absolute top-0 left-0   rounded-full mt-5 ml-25">
+                </div>
+                <div class="c-shape-invert bg-[var(--color-orangeMid)] absolute top-0 left-0  rounded-full mt-12">
+                </div>
+                <img src="/img/yo.png" alt="Ulises Vera Cuevas" class="absolute w-full h-full object-cover ml-5">
+            </div>
+        </div>
+        <div class="my-40">
+            <dl class="mb-20 flex justify-between flex-wrap gap-8 sm:mt-16 mx-10">
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-2xl font-mono text-white">Años de excelencia academica.</dt>
+                    <dd class="text-5xl font-semibold tracking-tight text-white font-mono">6</dd>
+                </div>
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-2xl font-mono text-white">Años como desarrollador.</dt>
+                    <dd class="text-5xl font-semibold tracking-tight text-white font-mono">2</dd>
+                </div>
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-2xl font-mono text-white">Experiencias y proyectos.</dt>
+                    <dd class="text-5xl font-semibold tracking-tight text-white font-mono">10<span
+                            class="text-[var(--color-orangeMid)]">+</span></dd>
+                </div>
+                <div class="flex flex-col-reverse gap-1">
+                    <dt class="text-2xl font-mono text-white">Ganas de aprender y mejorar</dt>
+                    <dd class="text-5xl font-semibold tracking-tight text-white font-mono">Ilimitadas</dd>
+                </div>
+            </dl>
+        </div>
+
+    </section>
+    <section id="stack" class="w-full my-8 px-4 flex flex-col items-center">
+        <h1 class="text-5xl sm:text-6xl md:text-6xl font-mono text-white my-16">
+            Stack<span class="text-[var(--color-orangeBase)]">.</span>
+        </h1>
+        <div class="container mx-auto max-w-[90%] overflow-hidden mt-7">
+            <div class="flex gap-25 animate-slide-left">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/primeng/primeng-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vuejs/vuejs-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/kotlin/kotlin-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/primeng/primeng-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/bootstrap/bootstrap-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+            </div>
+        </div>
+        <div class="container mx-auto max-w-[90%] overflow-hidden mt-7">
+            <div class="flex gap-25 animate-slide-right">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-90 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-90 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dotnetcore/dotnetcore-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/microsoftsqlserver/microsoftsqlserver-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-90 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+            </div>
+        </div>
+        <div class="container mx-auto max-w-[90%] overflow-hidden  mt-7">
+            <div class="flex gap-25 animate-slide-left">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+            </div>
+        </div>
+        <div class="container mx-auto max-w-[90%]  overflow-hidden  mt-7">
+            <div class="flex gap-25 animate-slide-right">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jetpackcompose/jetpackcompose-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/json/json-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vitejs/vitejs-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+            </div>
+        </div>
+        <div class="container mx-auto max-w-[90%]  overflow-hidden  mt-7">
+            <div class="flex gap-25 animate-slide-left">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/eclipse/eclipse-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/visualstudio/visualstudio-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                    class="w-10 h-10 transition duration-300 opacity-60 hover:invert-0 hover:opacity-100" />
+            </div>
+        </div>
+    </section>
+    <section id="exp" class="w-full my-8 px-4 flex flex-col items-center">
+        <h1 class="text-5xl sm:text-6xl md:text-6xl font-mono text-white mt-28">
+            Experiencias <span class="text-[var(--color-yellowbBase)]">y</span> Proyectos<span
+                class="text-[var(--color-orangeBase)]">.</span>
+        </h1>
+        <div class="my-8 w-full">
+            <div class="max-w-full mx-auto flex flex-col items-center justify-center gap-2 mb-24">
+                <h2 class="text-2xl sm:text-3xl font-mono text-white my-10">WiseCode<span
+                        class="text-[var(--color-redBase)]">.</span></h2>
+                <div class="flex flex-col md:flex-row items-center gap-20 w-full">
+                    <div class="md:w-1/2">
+                        <p class="ml-6 text-white font-mono text-justify">
+                            Como desarrollador Front-End junior, participé activamente en
+                            la implementación de soluciones solicitadas por el equipo, siempre
+                            atendiendo los requerimientos con buena actitud.
+                            Cada reto lo asumí como una oportunidad de aprendizaje, fortaleciendo
+                            mis habilidades técnicas y de colaboración.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mx-7">
+                            <ul class="relative border-l border-gray-600 mt-10 space-y-6">
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Adaptación al entorno de trabajo y aprendizaje de buenas prácticas en desarrollo
+                                    Front-End.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Integración de componentes reutilizables y estandarización de estilos con
+                                    Tailwind
+                                    CSS.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Participación en revisiones de código y solución de errores reportados.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Consumo de APIs REST y manejo de autenticación/roles en Angular.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Refactorización de código para mejorar rendimiento y mantenibilidad.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Entrega de funcionalidades en tiempo, cumpliendo requerimientos del cliente.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2">
+                        <div
+                            class="rounded-3xl rounded-t-3xl bg-white/2.5 p-8 ring-1 ring-white/10 hover:bg-gradient-to-r from-[var(--color-orangeBase)] via-[var(--color-orangeMid)] to-[var(--color-orangeStrong)]">
+                            <div class="grid grid-cols-2 grid-rows-2 w-full h-full gap-3">
+                                <div class="relative group w-full">
+                                    <div
+                                        class="rounded-3xl bg-black/20 p-6 ring-1 ring-black/10 w-full hover:bg-[var(--color-redBase)] cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                        <div class="flex flex-col items-center justify-center">
+                                            <h3 class="font-mono text-white">CGSMContraloria</h3>
+                                        </div>
+                                        <a href="cgsm.html">
+                                            <button
+                                                class="flex items-center gap-2 px-4 py-2 bg-[var(--color-pinkLight)] text-[var(--color-redBase)] rounded-xl hover:bg-[var(--color-pinkBase)]">
+                                                <span>Mas</span>
+                                                <!-- Icono de salida -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 top-full mt-2 hidden group-hover:flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-[var(--color-pinkBase)] shadow-lg z-50">
+                                        <div class="p-4">
+                                            <div
+                                                class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-[var(--color-pinkLight)]">
+                                                <div
+                                                    class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-[var(--color-orangeStrong)]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="size-6 text-[var(--color-yellowbBase)]">>
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M2.25 18.75a60.07 60.07 0 0 1 15.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 0 1 3 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 0 0-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 0 1-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 0 0 3 15h-.75M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Zm3 0h.008v.008H18V10.5Zm-12 0h.008v.008H6V10.5Z" />
+                                                    </svg>
+
+
+                                                </div>
+                                                <div>
+                                                    <a class="font-semibold text-[var(--color-redBase)]">
+                                                        Software de control financiero
+                                                        <span class="absolute inset-0"></span>
+                                                    </a>
+                                                    <p class="mt-1 text-[var(--color-orangeStrong)]">Una herramienta
+                                                        diseñada a medida para el departamento de contraloría de una
+                                                        importante empresa en el sector laboratorista, garantizando un
+                                                        manejo preciso de las finanzas.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative group w-full">
+                                    <div
+                                        class="rounded-3xl bg-black/20 p-6 ring-1 ring-black/10 w-full hover:bg-[var(--color-redBase)] cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                        <div class="flex flex-col items-center justify-center">
+                                            <h3 class="font-mono text-white">Koltek</h3>
+                                        </div>
+                                        <a href="koltek.html">
+                                            <button
+                                                class="flex items-center gap-2 px-4 py-2 bg-[var(--color-pinkLight)] text-[var(--color-redBase)] rounded-xl hover:bg-[var(--color-pinkBase)]">
+                                                <span>Mas</span>
+                                                <!-- Icono de salida -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 top-full mt-2 hidden group-hover:flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-[var(--color-pinkBase)] shadow-lg z-50">
+                                        <div class="p-4">
+                                            <div
+                                                class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-[var(--color-pinkLight)]">
+                                                <div
+                                                    class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-[var(--color-orangeStrong)]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="size-6 text-[var(--color-yellowbBase)]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M19.5 12c0-1.232-.046-2.453-.138-3.662a4.006 4.006 0 0 0-3.7-3.7 48.678 48.678 0 0 0-7.324 0 4.006 4.006 0 0 0-3.7 3.7c-.017.22-.032.441-.046.662M19.5 12l3-3m-3 3-3-3m-12 3c0 1.232.046 2.453.138 3.662a4.006 4.006 0 0 0 3.7 3.7 48.656 48.656 0 0 0 7.324 0 4.006 4.006 0 0 0 3.7-3.7c.017-.22.032-.441.046-.662M4.5 12l3 3m-3-3-3 3" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a class="font-semibold text-[var(--color-redBase)]">
+                                                        Software de gestión de proyectos
+                                                        <span class="absolute inset-0"></span>
+                                                    </a>
+                                                    <p class="mt-1 text-[var(--color-orangeStrong)]">Una herramienta
+                                                        completa para planificar, ejecutar y monitorear el progreso de
+                                                        cada proyecto.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative group w-full">
+                                    <div
+                                        class="rounded-3xl bg-black/20 p-6 ring-1 ring-black/10 w-full hover:bg-[var(--color-redBase)] cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                        <div class="flex flex-col items-center justify-center">
+                                            <h3 class="font-mono text-white">Bomeri</h3>
+                                        </div>
+                                        <a href="bomeri.html">
+                                            <button
+                                                class="flex items-center gap-2 px-4 py-2 bg-[var(--color-pinkLight)] text-[var(--color-redBase)] rounded-xl hover:bg-[var(--color-pinkBase)]">
+                                                <span>Mas</span>
+                                                <!-- Icono de salida -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 top-full mt-2 hidden group-hover:flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-[var(--color-pinkBase)] shadow-lg z-50">
+                                        <div class="p-4">
+                                            <div
+                                                class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-[var(--color-pinkLight)]">
+                                                <div
+                                                    class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-[var(--color-orangeStrong)]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="size-6 text-[var(--color-yellowbBase)]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="m20.25 7.5-.625 10.632a2.25 2.25 0 0 1-2.247 2.118H6.622a2.25 2.25 0 0 1-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125Z" />
+                                                    </svg>
+
+                                                </div>
+                                                <div>
+                                                    <a class="font-semibold text-[var(--color-redBase)]">
+                                                        Software de gestion de procesos y almacenes
+                                                        <span class="absolute inset-0"></span>
+                                                    </a>
+                                                    <p class="mt-1 text-[var(--color-orangeStrong)]">Una herramienta
+                                                        robusta diseñada para facilitar la monitorizacion de los datos y
+                                                        procesos de los almacenes de una importante empresa en el sector
+                                                        agricola.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container max-w-[90%] overflow-hidden mt-7">
+                                <div class="flex flex-wrap gap-3">
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Resolución
+                                        de bugs</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Front-end</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">UX/UI</span>
+                                    <span class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Software
+                                        a la medida</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Testing</span>
+                                    <span class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Consumo
+                                        de APIs</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">AWS/CodeCommit</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Scrum</span>
+                                </div>
+                            </div>
+                            <div class="container mx-auto max-w-[90%] overflow-hidden mt-7">
+                                <div class="flex items-center justify-between">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/primeng/primeng-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                                        class="w-10 h-10" />
+                                </div>
+                            </div>
+                            <div class="container mx-auto max-w-[90%] overflow-hidden mt-7">
+                                <div class="flex items-center justify-between">
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                                        class="w-10 h-10" />
+
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/jira/jira-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/swagger/swagger-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"
+                                        class="w-10 h-10" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="max-w-full mx-auto flex flex-col items-center justify-center gap-6">
+                <h2 class="text-2xl sm:text-3xl font-mono text-white my-10">Farmalive<span
+                        class="text-[var(--color-redBase)]">.</span></h2>
+                <div class="flex flex-col md:flex-row items-center gap-20 w-full">
+                    <div class="md:w-1/4">
+                        <p class="ml-6 text-white font-mono text-justify">
+                            En mi rol como desarrollador Full Stack junior, participé en la construcción y
+                            optimización
+                            de aplicaciones web, aportando tanto en la parte visual como en la lógica del servidor.
+                            Me
+                            enfoqué en transformar requerimientos en soluciones funcionales, manteniendo siempre
+                            disposición para aprender y adaptarme. Cada proyecto representó una ocasión para
+                            perfeccionar mis competencias técnicas y fortalecer mi capacidad de colaboración dentro
+                            del
+                            equipo.
+                        </p>
+
+                        <div class="flex flex-wrap gap-2 mx-7">
+                            <ul class="relative border-l border-gray-600 mt-10 space-y-6">
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Analisis de requisitos y propuestas de soluciones escalables y de alta calidad.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Seguimiento de procesos bajo metodologias agiles.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Participación en reuniones corporativas para establecer metas, alcance y
+                                    progresos.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Seguimiento de buenas practicas, codigo limpio y documentacion.
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Capacitacion de personal, feedback y comunicacion asertiva
+                                </li>
+                                <li class="ml-6 text-white font-mono">
+                                    <span
+                                        class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                                    Compromiso en tiempos, formas, calidad y entregas.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="md:w-3/4">
+                        <div
+                            class="rounded-3xl rounded-t-3xl bg-white/2.5 p-8 ring-1 ring-white/10 hover:bg-gradient-to-r from-[var(--color-orangeBase)] via-[var(--color-orangeMid)] to-[var(--color-orangeStrong)] ">
+                            <div class="grid grid-cols-2 grid-rows-2 w-full h-full gap-3">
+                                <div class="relative group w-full">
+                                    <div
+                                        class="rounded-3xl bg-black/20 p-6 ring-1 ring-black/10 w-full hover:bg-[var(--color-redBase)] cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                        <!-- Texto -->
+                                        <h3 class="font-mono text-white">Registros Farmalive</h3>
+
+                                        <!-- Botón con icono -->
+                                        <a href="https://registro.farmalive.com.mx/" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <button
+                                                class="flex items-center gap-2 px-4 py-2 bg-[var(--color-pinkLight)] text-[var(--color-redBase)] rounded-xl hover:bg-[var(--color-pinkBase)]">
+                                                <span>Visitar</span>
+                                                <!-- Icono de salida -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 top-full mt-2 hidden group-hover:flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-[var(--color-pinkBase)] shadow-lg z-50">
+                                        <div class="p-4">
+                                            <div
+                                                class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-[var(--color-pinkLight)]">
+                                                <div
+                                                    class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-[var(--color-orangeStrong)]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="size-6 text-[var(--color-yellowbBase)]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a class="font-semibold text-[var(--color-redBase)]">
+                                                        Formularios Inteligentes con OCR
+                                                        <span class="absolute inset-0"></span>
+                                                    </a>
+                                                    <p class="mt-1 text-[var(--color-orangeStrong)]">Formulario
+                                                        automatizado que utiliza reconocimiento óptico de caracteres
+                                                        para verificar información de documentos físicos.</p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative group w-full">
+                                    <div
+                                        class="rounded-3xl bg-black/20 p-6 ring-1 ring-black/10 w-full hover:bg-[var(--color-redBase)] cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                        <!-- Texto -->
+                                        <h3 class="font-mono text-white">Distribuciones Farmalive </h3>
+
+                                        <!-- Botón con icono -->
+                                        <a href="https://www.farmalive.com.mx/distribuciones.php" target="_blank"
+                                            rel="noopener noreferrer">
+                                            <button
+                                                class="flex items-center gap-2 px-4 py-2 bg-[var(--color-pinkLight)] text-[var(--color-redBase)] rounded-xl hover:bg-[var(--color-pinkBase)]">
+                                                <span>Visitar</span>
+                                                <!-- Icono de salida -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 top-full mt-2 hidden group-hover:flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-[var(--color-pinkBase)] shadow-lg z-50">
+                                        <div class="p-4">
+                                            <div
+                                                class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-[var(--color-pinkLight)]">
+                                                <div
+                                                    class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-[var(--color-orangeStrong)]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="size-6 text-[var(--color-yellowbBase)]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M15.182 15.182a4.5 4.5 0 0 1-6.364 0M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0ZM9.75 9.75c0 .414-.168.75-.375.75S9 10.164 9 9.75 9.168 9 9.375 9s.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Zm5.625 0c0 .414-.168.75-.375.75s-.375-.336-.375-.75.168-.75.375-.75.375.336.375.75Zm-.375 0h.008v.015h-.008V9.75Z" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a class="font-semibold text-[var(--color-redBase)]">
+                                                        Landing Page inclusiva.
+                                                        <span class="absolute inset-0"></span>
+                                                    </a>
+                                                    <p class="mt-1 text-[var(--color-orangeStrong)]">Diseño y desarrollo
+                                                        de una página que asegura la usabilidad para personas con
+                                                        distintas capacidades.
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="relative group w-full">
+                                    <div
+                                        class="rounded-3xl bg-black/20 p-6 ring-1 ring-black/10 w-full hover:bg-[var(--color-redBase)] cursor-pointer flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                                        <div class="flex flex-col items-center justify-center">
+                                            <h3 class="font-mono text-white">Sealive</h3>
+                                        </div>
+                                        <a href="sealive.html">
+                                            <button
+                                                class="flex items-center gap-2 px-4 py-2 bg-[var(--color-pinkLight)] text-[var(--color-redBase)] rounded-xl hover:bg-[var(--color-pinkBase)]">
+                                                <span>Mas</span>
+                                                <!-- Icono de salida -->
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                                    stroke-width="1.5" stroke="currentColor" class="size-6">
+                                                    <path stroke-linecap="round" stroke-linejoin="round"
+                                                        d="M8.25 9V5.25A2.25 2.25 0 0 1 10.5 3h6a2.25 2.25 0 0 1 2.25 2.25v13.5A2.25 2.25 0 0 1 16.5 21h-6a2.25 2.25 0 0 1-2.25-2.25V15M12 9l3 3m0 0-3 3m3-3H2.25" />
+                                                </svg>
+                                            </button>
+                                        </a>
+                                    </div>
+                                    <div
+                                        class="absolute left-0 top-full mt-2 hidden group-hover:flex w-screen max-w-md flex-auto overflow-hidden rounded-3xl bg-[var(--color-pinkBase)] shadow-lg z-50">
+                                        <div class="p-4">
+                                            <div
+                                                class="group relative flex gap-x-6 rounded-lg p-4 hover:bg-[var(--color-pinkLight)]">
+                                                <div
+                                                    class="mt-1 flex size-11 flex-none items-center justify-center rounded-lg bg-[var(--color-orangeStrong)]">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none"
+                                                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                                                        class="size-6 text-[var(--color-yellowbBase)]">
+                                                        <path stroke-linecap="round" stroke-linejoin="round"
+                                                            d="M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21" />
+                                                    </svg>
+                                                </div>
+                                                <div>
+                                                    <a class="font-semibold text-[var(--color-redBase)]">
+                                                        Software de gestion de sucursales.
+                                                        <span class="absolute inset-0"></span>
+                                                    </a>
+                                                    <p class="mt-1 text-[var(--color-orangeStrong)]">Herramienta
+                                                        diseñlada para facilitar la gestion y registro de los pedidos a
+                                                        domicilio de una cadena de sucursales farmaceuticas.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="container max-w-[90%] overflow-hidden mt-7">
+                                <div class="flex flex-wrap gap-3">
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Resolución
+                                        de bugs</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Responsive
+                                        Design</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Full-Stack</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">UX/UI</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Testing</span>
+                                    <span class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">APIs
+                                        Rest</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Scrum</span>
+                                    <span class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Diseño
+                                        de
+                                        Software</span>
+                                    <span class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">Clean
+                                        Architecture</span>
+                                    <span
+                                        class="px-3 py-1 bg-black/10 text-white rounded-lg font-mono text-sm">JWT</span>
+                                </div>
+                            </div>
+                            <div class="container mx-auto max-w-[90%] overflow-hidden mt-7">
+                                <div class="flex items-center justify-between">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/primeng/primeng-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/laravel/laravel-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/angular/angular-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg"
+                                        class="w-10 h-10" />
+                                </div>
+                            </div>
+                            <div class="container mx-auto max-w-[90%] overflow-hidden mt-7">
+                                <div class="flex items-center justify-between">
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/docker/docker-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg"
+                                        class="w-10 h-10" />
+                                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/railway/railway-original.svg"
+                                        class="w-10 h-10" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="cursos" class="w-full my-8 px-4 flex flex-col items-center">
+        <h1 class="text-4xl sm:text-6xl md:text-6xl font-mono text-white mt-28">
+            Cursos <span class="text-[var(--color-orangeMid)]">y</span> Certificaciones<span
+                class="text-[var(--color-yellowbBase)]">.</span>
+        </h1>
+        <div class="max-w-full mx-auto flex flex-col items-center justify-center gap-6">
+            <h2 class="text-2xl sm:text-3xl font-mono text-white my-10">Certificaciones<span
+                    class="text-[var(--color-orangeMid)]"> e </span>Insignias<span
+                    class="text-[var(--color-redBase)]">.</span></h2>
+
+            <p class="text-white font-mono text-justify max-w-2xl px-6">
+                Comprometido con el aprendizaje continuo, he completado diversos cursos y obtenido certificaciones e
+                insignias que respaldan mis habilidades y conocimientos en desarrollo web y tecnologías relacionadas.
+            </p>
+            <div class="flex flex-col md:flex-row items-center gap-20 w-full">
+                <div class="md:w-1/2">
+                    <div class="rounded-3xl bg-white/10 p-10 ring-1 ring-white/10 hover:bg-gradient-to-r 
+                        from-[var(--color-orangeBase)] via-[var(--color-orangeMid)] to-[var(--color-orangeStrong)]">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Certificado Emergentes.jpg"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Certificado Mongo.jpg"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Certificado Android.jpg"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Certificado Laravel.jpg"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Certificado Angular.jpg"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <div class="rounded-3xl bg-white/10 p-10 ring-1 ring-white/10 hover:bg-gradient-to-r 
+                        from-[var(--color-orangeBase)] via-[var(--color-orangeMid)] to-[var(--color-orangeStrong)]">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
+
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Insignia5.png"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Insignia6.png"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Insignia7.png"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                            <div class="flex items-center justify-center bg-black/20 p-4 rounded-xl">
+                                <img src="/img/Insignia8.png"
+                                    class="rounded-lg max-h-40 object-contain transform transition duration-500 hover:scale-150 object-center" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="max-w-full mx-auto flex flex-col items-center justify-center gap-6">
+            <h2 class="text-2xl sm:text-3xl font-mono text-white my-10">Cursos en proceso<span
+                    class="text-[var(--color-redBase)]">.</span></h2>
+            <div class="flex flex-col md:flex-row items-center gap-20 w-full">
+                <div class="rounded-3xl bg-white/10 p-10 ring-1 ring-white/10 hover:bg-gradient-to-r 
+              from-[var(--color-orangeBase)] via-[var(--color-orangeMid)] to-[var(--color-orangeStrong)]">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-6 w-full">
+                        <!-- Curso 1 -->
+                        <div class="flex flex-col items-center justify-center bg-black/20 p-4 rounded-xl w-full">
+                            <a href="https://www.udemy.com/share/10bRhD3@XRNXX_u4GW9LATcJ1jljPhHbODWaidVJy2x8keUrwRNrdqKbBfyxJjLfNiyo9vWy7A==/"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="/img/angular2.jpg"
+                                    class="rounded-lg max-h-40 object-contain hover:scale-105 transition-transform duration-500" />
+                            </a>
+
+                            <h3 class="text-white text-sm mt-3 font-mono text-center">
+                                Angular Pro: Lleva tus bases al siguiente nivel
+                            </h3>
+
+                            <!-- Porcentaje -->
+                            <div class="w-full bg-white/20 rounded-full h-2 mt-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 5%;"></div>
+                            </div>
+                            <p class="text-xs text-gray-300 mt-1">5% completado</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center bg-black/20 p-4 rounded-xl w-full">
+                            <a href="https://www.udemy.com/share/109MlO3@mhFAfBiq4HZjx_raUzSMMz5CKU8pCiHo35YenLepgVSPb7wttbRKK_bPe6yYrIptvw==/"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="/img/nodejs.webp"
+                                    class="rounded-lg max-h-40 object-contain hover:scale-105 transition-transform duration-500" />
+                            </a>
+
+                            <h3 class="text-white text-sm mt-3 font-mono text-center">
+                                NodeJS: De cero a experto
+                            </h3>
+
+                            <!-- Porcentaje -->
+                            <div class="w-full bg-white/20 rounded-full h-2 mt-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 7%;"></div>
+                            </div>
+                            <p class="text-xs text-gray-300 mt-1">7% completado</p>
+                        </div>
+                        <div class="flex flex-col items-center justify-center bg-black/20 p-4 rounded-xl w-full">
+                            <a href="https://www.udemy.com/share/104WIg3@XCb3-Odd1p4tsxPEoA2Oo__O5nw5wDgkAioyggG3i1TvcKpYufE3CSUoghuumuKhSA==/"
+                                target="_blank" rel="noopener noreferrer">
+                                <img src="/img/vuejs.jpg"
+                                    class="rounded-lg max-h-40 object-contain hover:scale-105 transition-transform duration-500" />
+                            </a>
+
+                            <h3 class="text-white text-sm mt-3 font-mono text-center">
+                                Vue.js: De cero a experto
+                            </h3>
+
+                            <!-- Porcentaje -->
+                            <div class="w-full bg-white/20 rounded-full h-2 mt-2">
+                                <div class="bg-green-500 h-2 rounded-full" style="width: 44%;"></div>
+                            </div>
+                            <p class="text-xs text-gray-300 mt-1">44% completado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contactame" class="w-full my-8 px-4 flex flex-col items-center">
+        <h1 class="text-5xl sm:text-6xl md:text-6xl font-mono text-white mt-28">
+            Contáctame<span class="text-[var(--color-orangeMid)]">.</span>
+        </h1>
+
+        <!-- Grid de iconos -->
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-6 mt-10">
+            <a href="https://github.com/UliVeraC" target="_blank"
+                class="flex items-center justify-center p-4 bg-white/10 rounded-xl hover:bg-black/10 w-20 h-20">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 64 64">
+                    <path
+                        d="M32 6C17.641 6 6 17.641 6 32c0 12.277 8.512 22.56 19.955 25.286-.592-.141-1.179-.299-1.755-.479V50.85c0 0-.975.325-2.275.325-3.637 0-5.148-3.245-5.525-4.875-.229-.993-.827-1.934-1.469-2.509-.767-.684-1.126-.686-1.131-.92-.01-.491.658-.471.975-.471 1.625 0 2.857 1.729 3.429 2.623 1.417 2.207 2.938 2.577 3.721 2.577.975 0 1.817-.146 2.397-.426.268-1.888 1.108-3.57 2.478-4.774-6.097-1.219-10.4-4.716-10.4-10.4 0-2.928 1.175-5.619 3.133-7.792C19.333 23.641 19 22.494 19 20.625c0-1.235.086-2.751.65-4.225 0 0 3.708.026 7.205 3.338C28.469 19.268 30.196 19 32 19s3.531.268 5.145.738c3.497-3.312 7.205-3.338 7.205-3.338.567 1.474.65 2.99.65 4.225 0 2.015-.268 3.19-.432 3.697C46.466 26.475 47.6 29.124 47.6 32c0 5.684-4.303 9.181-10.4 10.4 1.628 1.43 2.6 3.513 2.6 5.85v8.557c-.576.181-1.162.338-1.755.479C49.488 54.56 58 44.277 58 32 58 17.641 46.359 6 32 6zM33.813 57.93C33.214 57.972 32.61 58 32 58 32.61 58 33.213 57.971 33.813 57.93zM37.786 57.346c-1.164.265-2.357.451-3.575.554C35.429 57.797 36.622 57.61 37.786 57.346zM32 58c-.61 0-1.214-.028-1.813-.07C30.787 57.971 31.39 58 32 58zM29.788 57.9c-1.217-.103-2.411-.289-3.574-.554C27.378 57.61 28.571 57.797 29.788 57.9z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://www.linkedin.com/in/ulisesvera/" target="_blank"
+                class="flex items-center justify-center p-4 bg-white/10 rounded-xl hover:bg-black/10 w-20 h-20">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                    <path
+                        d="M41,4H9C6.24,4,4,6.24,4,9v32c0,2.76,2.24,5,5,5h32c2.76,0,5-2.24,5-5V9C46,6.24,43.76,4,41,4z M17,20v19h-6V20H17z M11,14.47c0-1.4,1.2-2.47,3-2.47s2.93,1.07,3,2.47c0,1.4-1.12,2.53-3,2.53C12.2,17,11,15.87,11,14.47z M39,39h-6c0,0,0-9.26,0-10 c0-2-1-4-3.5-4.04h-0.08C27,24.96,26,27.02,26,29c0,0.91,0,10,0,10h-6V20h6v2.56c0,0,1.93-2.56,5.81-2.56 c3.97,0,7.19,2.73,7.19,8.26V39z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=veracuevasu@gmail.com" target="_blank"
+                class="flex items-center justify-center p-4 bg-white/10 rounded-xl hover:bg-black/10 w-20 h-20">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                    <path
+                        d="M12 23.403V23.39 10.389L11.88 10.3h-.01L9.14 8.28C7.47 7.04 5.09 7.1 3.61 8.56 2.62 9.54 2 10.9 2 12.41v3.602L12 23.403zM38 23.39v.013l10-7.391V12.41c0-1.49-.6-2.85-1.58-3.83-1.46-1.457-3.765-1.628-5.424-.403L38.12 10.3 38 10.389V23.39zM14 24.868l10.406 7.692c.353.261.836.261 1.189 0L36 24.868V11.867L25 20l-11-8.133V24.868zM38 25.889V41c0 .552.448 1 1 1h6.5c1.381 0 2.5-1.119 2.5-2.5V18.497L38 25.889zM12 25.889L2 18.497V39.5C2 40.881 3.119 42 4.5 42H11c.552 0 1-.448 1-1V25.889z">
+                    </path>
+                </svg>
+            </a>
+            <a href="https://wa.me/527714144641" target="_blank"
+                class="flex items-center justify-center p-4 bg-white/10 rounded-xl hover:bg-black/10 w-20 h-20">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 50 50">
+                    <path
+                        d="M 25 2 C 12.318 2 2 12.318 2 25 C 2 28.96 3.0228906 32.853062 4.9628906 36.289062 L 2.0371094 46.730469 C 1.9411094 47.073469 2.03325 47.440312 2.28125 47.695312 C 2.47225 47.892313 2.733 48 3 48 C 3.08 48 3.1612344 47.989703 3.2402344 47.970703 L 14.136719 45.271484 C 17.463719 47.057484 21.21 48 25 48 C 37.682 48 48 37.682 48 25 C 48 12.318 37.682 2 25 2 z M 16.642578 14 C 17.036578 14 17.428437 14.005484 17.773438 14.021484 C 18.136437 14.039484 18.624516 13.883484 19.103516 15.021484 C 19.595516 16.189484 20.775875 19.058563 20.921875 19.351562 C 21.069875 19.643563 21.168656 19.984047 20.972656 20.373047 C 20.776656 20.762047 20.678813 21.006656 20.382812 21.347656 C 20.086813 21.688656 19.762094 22.107141 19.496094 22.369141 C 19.200094 22.660141 18.892328 22.974594 19.236328 23.558594 C 19.580328 24.142594 20.765484 26.051656 22.521484 27.597656 C 24.776484 29.583656 26.679531 30.200188 27.269531 30.492188 C 27.859531 30.784188 28.204828 30.734703 28.548828 30.345703 C 28.892828 29.955703 30.024969 28.643547 30.417969 28.060547 C 30.810969 27.477547 31.204094 27.572578 31.746094 27.767578 C 32.288094 27.961578 35.19125 29.372062 35.78125 29.664062 C 36.37125 29.956063 36.766062 30.102703 36.914062 30.345703 C 37.062062 30.587703 37.062312 31.754234 36.570312 33.115234 C 36.078313 34.477234 33.717984 35.721672 32.583984 35.888672 C 31.565984 36.037672 30.277281 36.10025 28.863281 35.65625 C 28.006281 35.38625 26.907047 35.028734 25.498047 34.427734 C 19.575047 31.901734 15.706156 26.012047 15.410156 25.623047 C 15.115156 25.234047 13 22.46275 13 19.59375 C 13 16.72475 14.524406 15.314469 15.066406 14.730469 C 15.608406 14.146469 16.248578 14 16.642578 14 z">
+                    </path>
+                </svg>
+                </svg>
+            </a>
+        </div>
+    </section>
+    <script src="/index.js"></script>
 </body>
+
 </html>

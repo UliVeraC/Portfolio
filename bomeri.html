@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/output.css" rel="stylesheet" />
+    <title>bomeri</title>
+</head>
+
+<body
+    class="min-h-screen bg-fixed bg-[url('https://www.transparenttextures.com/patterns/skulls.png'),linear-gradient(to_right,var(--color-background),var(--color-backgroundSecondary),var(--color-backgroundLastly))]">
+    <header class="sticky top-0 z-50">
+        <nav class="mx-auto max-w-7xl">
+            <div class="relative flex h-20 items-center justify-between mx-1.5">
+                <!-- Nombre al inicio -->
+                <div class="flex items-center">
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                            class="w-12 h-12 text-white">
+                            <path fill-rule="evenodd"
+                                d="M9.53 2.47a.75.75 0 0 1 0 1.06L4.81 8.25H15a6.75 6.75 0 0 1 0 13.5h-3a.75.75 0 0 1 0-1.5h3a5.25 5.25 0 1 0 0-10.5H4.81l4.72 4.72a.75.75 0 1 1-1.06 1.06l-6-6a.75.75 0 0 1 0-1.06l6-6a.75.75 0 0 1 1.06 0Z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- aquí puedes agregar más items del nav (botones, links) -->
+            </div> <!-- CIERRE del div.relative dentro del nav (importante) -->
+        </nav>
+    </header>
+
+    <div class="flex flex-col md:flex-row items-center gap-8 rounded-3xl rounded-t-3xl bg-white/2.5 p-8 ring-1 ring-white/10 mx-10">
+        
+        <div class="md:w-1/2">
+            <div class="my-10 mx-9">
+                <h1 class="text-4xl font-bold font-mono text-white">Bomeri</h1>
+            </div>
+            <div class="my-10 mx-9">
+                <p class="text-lg text-white font-mono text-justify">Plataforma de software creada para una importante empresa en el sector agroindustrial con el proposito de optimizar y llevar un control de sus almacenes y productos, orientado a la automatizacion, seguimiento y visualizacion de datos. <br>
+                    Una de los proyectos mas robustos y complejos en el cual participe como desarrollador frontend.
+                </p>
+                <p class="text-lg text-white font-mono text-justify mt-9">
+                    Software a la medida que cuenta con las siguientes caracteristicas:
+                </p>
+                <div class="flex flex-wrap gap-2 mx-7">
+                    <ul class="relative border-l border-gray-600 mt-10 space-y-6">
+                        <li class="ml-6 text-white font-mono">
+                            <span class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                            Autenticación por medio de Json Web Taken (JWT).
+                        </li>
+                        <li class="ml-6 text-white font-mono">
+                            <span class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                            Desarollo legacy.
+                        </li>
+                        <li class="ml-6 text-white font-mono">
+                            <span class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                            Validacion de datos en el frontend y backend.
+                        </li>
+                        <li class="ml-6 text-white font-mono">
+                            <span class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                            Visualizacion de flujo de trabajo (workflow) para el seguimiento de los proceso dentro de los almacenes y su plantilla de trabajadores.
+                        </li>
+                        <li class="ml-6 text-white font-mono">
+                            <span class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                            UX/UI intuitiva y facil de leer
+                        </li>
+                        <li class="ml-6 text-white font-mono">
+                            <span class="absolute -left-2 w-4 h-4 bg-[var(--color-orangeStrong)] rounded-full"></span>
+                            Arquitectura escalable y modular para facilitar futuras actualizaciones y mejoras tanto en
+                            el frontend como en el backend
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="md:w-1/2">
+            <!-- Carousel - Tailwind CSS + Vanilla JS -->
+            <div class="relative w-full mx-auto select-none" id="carousel" aria-roledescription="carousel"
+                aria-label="Galería destacada">
+                <!-- Viewport -->
+                <div class="overflow-hidden rounded-2xl">
+                    <!-- Track -->
+                    <div class="flex transition-transform duration-500 ease-out" data-carousel-track>
+                        <!-- Slides (igual que antes) -->
+                        <div class="shrink-0 w-full h-64 sm:h-80 md:h-[28rem] relative" role="group"
+                            aria-roledescription="slide" aria-label="1 de 4">
+                            <img src="/img/bomeri1.png"
+                                alt="Laptop con editor de código" class="w-full h-full object-cover" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                <!-- Prev / Next -->
+                <button
+                    class="absolute left-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                    aria-label="Anterior" data-carousel-prev>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M15 19l-7-7 7-7" />
+                    </svg>
+                </button>
+                <button
+                    class="absolute right-2 top-1/2 -translate-y-1/2 bg-white/80 hover:bg-white rounded-full p-2 shadow focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black"
+                    aria-label="Siguiente" data-carousel-next>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 5l7 7-7 7" />
+                    </svg>
+                </button>
+
+                <!-- Indicators -->
+                <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-2" role="tablist"
+                    aria-label="Indicadores">
+                    <button
+                        class="w-2.5 h-2.5 rounded-full bg-white/70 data-[active=true]:w-6 data-[active=true]:h-2.5 data-[active=true]:bg-white transition-all"
+                        aria-label="Ir a la diapositiva 1" data-carousel-dot></button>
+                    <button
+                        class="w-2.5 h-2.5 rounded-full bg-white/70 data-[active=true]:w-6 data-[active=true]:h-2.5 data-[active=true]:bg-white transition-all"
+                        aria-label="Ir a la diapositiva 2" data-carousel-dot></button>
+                    <button
+                        class="w-2.5 h-2.5 rounded-full bg-white/70 data-[active=true]:w-6 data-[active=true]:h-2.5 data-[active=true]:bg-white transition-all"
+                        aria-label="Ir a la diapositiva 3" data-carousel-dot></button>
+                    <button
+                        class="w-2.5 h-2.5 rounded-full bg-white/70 data-[active=true]:w-6 data-[active=true]:h-2.5 data-[active=true]:bg-white transition-all"
+                        aria-label="Ir a la diapositiva 4" data-carousel-dot></button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const root = document.getElementById('carousel');
+            if (!root) {
+                console.error('No se encontró #carousel — revisa tu HTML y que el id exista.');
+                return;
+            }
+
+            const track = root.querySelector('[data-carousel-track]');
+            const slides = track ? Array.from(track.children) : [];
+            const btnPrev = root.querySelector('[data-carousel-prev]');
+            const btnNext = root.querySelector('[data-carousel-next]');
+            const dots = Array.from(root.querySelectorAll('[data-carousel-dot]'));
+
+            if (!track || slides.length === 0) {
+                console.error('No se encontró el track o no hay slides. Revisa las marcas data-carousel-track / slides.');
+                return;
+            }
+
+            let index = 0;
+            let autoplayId = null;
+            const INTERVAL = 4500; // ms
+
+            function goTo(i) {
+                index = (i + slides.length) % slides.length;
+                track.style.transform = `translateX(${-index * 100}%)`;
+                dots.forEach((d, di) => d.dataset.active = String(di === index));
+            }
+
+            function next() { goTo(index + 1); }
+            function prev() { goTo(index - 1); }
+
+            if (btnNext) btnNext.addEventListener('click', next);
+            if (btnPrev) btnPrev.addEventListener('click', prev);
+            dots.forEach((dot, i) => dot.addEventListener('click', () => goTo(i)));
+
+            root.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowRight') next();
+                if (e.key === 'ArrowLeft') prev();
+            });
+            root.tabIndex = 0; // focusable
+
+            // Touch swipe
+            let startX = 0, deltaX = 0, touching = false;
+            track.addEventListener('touchstart', (e) => {
+                touching = true;
+                startX = e.touches[0].clientX;
+                deltaX = 0;
+                clearInterval(autoplayId);
+            }, { passive: true });
+
+            track.addEventListener('touchmove', (e) => {
+                if (!touching) return;
+                deltaX = e.touches[0].clientX - startX;
+            }, { passive: true });
+
+            track.addEventListener('touchend', () => {
+                touching = false;
+                if (Math.abs(deltaX) > 50) (deltaX < 0 ? next() : prev());
+                startAutoplay();
+            });
+
+            function startAutoplay() {
+                clearInterval(autoplayId);
+                autoplayId = setInterval(next, INTERVAL);
+            }
+            root.addEventListener('mouseenter', () => clearInterval(autoplayId));
+            root.addEventListener('mouseleave', startAutoplay);
+
+            // Init
+            goTo(0);
+            startAutoplay();
+        });
+    </script>
+</body>
+
+</html>
