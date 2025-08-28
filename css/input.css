@@ -1,1 +1,117 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* Variables CSS */
+:root {
+    --color-background: #0f2027;
+    --color-backgroundSecondary: #406473;
+    --color-backgroundLastly: #7CA8B4;
+
+    --color-yellowbBase: #FFDA82;
+    --color-orangeBase: #FAB157;
+    --color-orangeMid: #EE9848;
+    --color-orangeStrong: #D46106;
+    --color-redBase: #8C4924;
+    --color-pinkBase: #ECB8B4;
+    --color-pinkLight: #F2D0C1;
+
+    
+}
+
+/* ------------------------------------- */
+/* Estilos por defecto para móviles (Mobile-First) */
+/* El menú móvil se muestra por defecto */
+#mobileMenu {
+    display: contents;
+    /* Manteniendo tu estilo original */
+    color: var(--color-background);
+}
+
+.mancha-traslucida {
+    filter: blur(60px);
+    /* width: 400px;
+    height: 400px; */
+    border-radius: 60% 40% 30% 70% / 60% 50% 70% 50%;
+}
+
+.c-shape {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(var(--color-yellowbBase) 360deg, transparent 0deg);
+    mask: radial-gradient(farthest-side, transparent 85%, black 86%);
+    -webkit-mask: radial-gradient(farthest-side, transparent 85%, black 86%);
+    opacity: 0.9;
+}
+
+.c-shape-invert {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(var(--color-orangeBase) 240deg, transparent 0deg);
+    mask: radial-gradient(farthest-side, transparent 85%, black 86%);
+    -webkit-mask: radial-gradient(farthest-side, transparent 85%, black 86%);
+    transform: rotate(180deg);
+    opacity: 0.9;
+}
+
+/* Media query para tablets y computadoras de escritorio */
+@media screen and (min-width: 769px) {
+
+    /* Ocultamos el menú móvil a partir de este tamaño */
+    #mobileMenu {
+        display: none;
+    }
+}
+
+@keyframes slide-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+.animate-slide-left {
+    display: flex;
+    width: max-content;
+    animation: slide-left 12s linear infinite;
+}
+
+@keyframes slide-right {
+    0% {
+        transform: translateX(-50%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.animate-slide-right {
+    display: flex;
+    width: max-content;
+    animation: slide-right 12s linear infinite;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Chrome, Safari y Opera */
+body::-webkit-scrollbar {
+    width: 10px;
+    /* ancho del scrollbar */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: orange;
+    /* color del pulgar */
+    /* bordes redondeados opcionales */
+}
+
+body::-webkit-scrollbar-track {
+    background: var(--color-backgroundLastly);
+    /* color del “fondo” del scrollbar */
+}
