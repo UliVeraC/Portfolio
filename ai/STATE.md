@@ -3,7 +3,7 @@
 **Actualizado:** 2026-06-01 · **Rama:** main
 
 ## Objetivo actual
-Rediseño TOTAL del portafolio a **dark minimalista, sobrio y ejecutivo** (vibe Linear/Vercel). **Landing + las 4 páginas de proyecto (CGSM, bomeri, koltek, sealive) YA rediseñadas y compiladas** (2026-06-01). Falta: validar visualmente con el usuario y afinar contenido (métricas reales en los case studies; stack por proyecto está inferido, confirmar).
+Rediseño TOTAL del portafolio a **dark minimalista, sobrio y ejecutivo** (vibe Linear/Vercel). **Landing + las 4 páginas de proyecto (CGSM, bomeri, koltek, sealive) rediseñadas, validadas por el usuario, commiteadas y pusheadas a `origin/main`** (2026-06-01). Falta solo afinar contenido (métricas reales en los case studies; stack por proyecto está inferido, confirmar).
 
 ## Dirección de diseño (acordada)
 - Base: fondo casi negro `#0a0a0a`, neutros/grises, **un solo acento** naranja `#D46106`.
@@ -21,8 +21,8 @@ Rediseño TOTAL del portafolio a **dark minimalista, sobrio y ejecutivo** (vibe 
 - Skill de screenshots/navegador (Playwright MCP): descartado por el usuario (no le interesa). Iteramos diseño sin feedback visual automático.
 
 ## En progreso
-- Diseño validado por el usuario (le gusta). Comportamientos arreglados y validados (ver abajo).
-- [ ] Pendiente: commit de todo lo nuevo; afinar contenido de case studies con métricas reales.
+- Sesión 2026-06-01 cerrada: diseño + comportamientos validados, commiteados y **pusheados a GitHub** (`origin/main`, hasta el commit `3c103a4`).
+- [ ] Único pendiente real: afinar contenido de los case studies con métricas reales + confirmar stack por proyecto.
 
 ## Comportamiento (arreglado y validado 2026-06-01)
 - **Scrollspy** (`index.js`): la nav resalta la sección visible (color acento) y refleja la sección en la URL vía `replaceState` conforme se hace scroll.
