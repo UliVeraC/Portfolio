@@ -3,7 +3,7 @@
 **Actualizado:** 2026-06-01 · **Rama:** main
 
 ## Objetivo actual
-Rediseño TOTAL del portafolio: de "colorido/muchos efectos" a **dark minimalista, sobrio y ejecutivo** (vibe Linear/Vercel). Debe proyectar seniority y fluidez trabajando con IA (demostrar, no presumir).
+Rediseño TOTAL del portafolio a **dark minimalista, sobrio y ejecutivo** (vibe Linear/Vercel). **Landing + las 4 páginas de proyecto (CGSM, bomeri, koltek, sealive) YA rediseñadas y compiladas** (2026-06-01). Falta: validar visualmente con el usuario y afinar contenido (métricas reales en los case studies; stack por proyecto está inferido, confirmar).
 
 ## Dirección de diseño (acordada)
 - Base: fondo casi negro `#0a0a0a`, neutros/grises, **un solo acento** naranja `#D46106`.
@@ -12,6 +12,8 @@ Rediseño TOTAL del portafolio: de "colorido/muchos efectos" a **dark minimalist
 - Proyectos → reescribir como case studies: problema → qué hiciste → impacto medible → stack.
 - Añadir sección "Cómo trabajo con IA" (proceso real, sin buzzwords; nada de chatbot salvo que quede impecable).
 - Pulido: `lang="es"`, microinteracciones sutiles.
+- **Decisiones de sesión (2026-06-01):** hero CON foto tratada sobria (grayscale→color en hover); mono = **JetBrains Mono**; sans = **Inter**; **se eliminó por completo** la sección "Cursos y Certificaciones".
+- **Implementación Tailwind v4:** la paleta y fuentes viven en `@theme` de `css/input.css` → se usan como utilidades (`bg-bg`, `text-fg`, `text-muted`, `text-accent`, `bg-surface`, `border-border`, `text-faint`, `font-mono`). Eyebrow mono via clase `.eyebrow`.
 
 ## Tooling de diseño (estado de integración)
 - **ui-ux-pro-max** (skill): instalado en `.claude/skills/ui-ux-pro-max/` y **ACTIVO** (carga tras reiniciar sesión). Stack `html-tailwind` disponible. Esta es la herramienta de diseño que usamos.
@@ -19,22 +21,30 @@ Rediseño TOTAL del portafolio: de "colorido/muchos efectos" a **dark minimalist
 - Skill de screenshots/navegador (Playwright MCP): descartado por el usuario (no le interesa). Iteramos diseño sin feedback visual automático.
 
 ## En progreso
-- [ ] Empezar el rediseño por `css/input.css` (nueva base de paleta/tipografía/espaciado).
+- Diseño validado por el usuario (le gusta). Comportamientos arreglados y validados (ver abajo).
+- [ ] Pendiente: commit de todo lo nuevo; afinar contenido de case studies con métricas reales.
+
+## Comportamiento (arreglado y validado 2026-06-01)
+- **Scrollspy** (`index.js`): la nav resalta la sección visible (color acento) y refleja la sección en la URL vía `replaceState` conforme se hace scroll.
+- **Volver desde páginas de proyecto** (`carousel.js`): si se llegó desde el index, los enlaces `[data-back]` usan `history.back()` → restaura el scroll exacto (caes en la card del proyecto). Respaldo: `index.html#exp`.
+- **Menú móvil**: pasado a `position: absolute` (antes dejaba un hueco muerto bajo el header).
 
 ## Siguientes pasos
-1. Reescribir `css/input.css` con la nueva base (paleta `#0a0a0a` + acento `#D46106` + tipografía sans/mono + espaciado).
-2. Rehacer hero sobrio → validar.
-3. Proyectos como case studies; colapsar stack; sección IA; pulido (`lang="es"`, microinteracciones); replicar a páginas de proyecto.
+1. Recoger feedback visual del usuario y ajustar.
+2. **Afinar contenido de los case studies con métricas/impacto REALES** (ahora son cualitativos; no se inventaron números). El usuario debe aportar cifras (usuarios, tiempos, % de mejora, etc.).
+3. Confirmar el stack por proyecto en las páginas (los chips están inferidos del diseño viejo, no verificados).
 4. Al tocar CSS: compilar Tailwind (`input.css` → `output.css`) y commitear `output.css`.
 
 ## Decisiones recientes (resumen; detalle en ADRs)
-- Memoria operativa vive en el repo versionada (no en almacén privado del agente). Aún sin ADR formal; documentado en `CLAUDE.md`.
-- Rediseño dark minimalista / rediseño total (ver "Dirección de diseño").
+- **ADR 0001** (`docs/adr/0001-rediseno-dark-minimalista.md`): rediseño dark minimalista + sistema de diseño completo (paleta, tipografía, estructura). Carpeta `docs/adr/` arrancada aquí.
+- Memoria operativa vive en el repo versionada; documentado en `CLAUDE.md`.
 - Herramienta de diseño = skill `ui-ux-pro-max` (no 21st SDK, no Playwright). Ver "Tooling de diseño".
 - Se trabaja directo sobre `main`; las ramas `Inicio` quedan en desuso.
+- Se eliminó la dependencia `@tailwindplus/elements` (el dropdown de CV → dos botones simples).
 
 ## Preguntas abiertas / bloqueos
-- Ninguno por ahora.
+- Faltan **métricas reales** para los case studies (ver Siguientes pasos #2).
 
 ## Trampas activas (ver docs/gotchas.md)
-- Ninguna registrada todavía.
+- Ojo case-sensitive en hosting Linux: el archivo es `CGSM.html` (mayúsculas). La landing ya enlaza con la grafía correcta; verificar al desplegar.
+- El carrusel de proyectos ahora vive en `/carousel.js` (compartido). Genera los dots según el nº de slides y oculta controles si hay una sola imagen (caso Bomeri).
